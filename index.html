@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+        <meta
+          name="keywords"
+          content="icpr, workshop, computer vision, computer graphics, visual learning, simulation environments, robotics, machine learning, object detection, single object tracking, Multiple-object tracking"
+        />
+    
+        <link rel="shortcut icon" href="2024/img/website_logo.png" />
+    
+        <title>
+            PRCV2024 广域红外小目标检测挑战赛
+        </title>
+        <meta
+          name="description"
+          content="PRCV2024 广域红外小目标检测挑战赛 ---"
+        />
+    
+        <!--Open Graph Related Stuff-->
+        <meta
+          property="og:title"
+          content="Challenge on Moving Object Detection and Tracking in Satellite Videos"
+        />
+        <meta property="og:url" content="https://SatVideoDTchallenge.github.io/" />
+        <meta
+          property="og:description"
+          content="PRCV2024 广域红外小目标检测挑战赛 ---"
+        />
+        <meta
+          property="og:site_name"
+          content="PRCV2024 广域红外小目标检测挑战赛"
+        />
+        <meta property="og:image" content="" />
+        <meta property="og:image:url" content="" />
+    
+        <!--Twitter Card Stuff-->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="PRCV2024 广域红外小目标检测挑战赛"
+        />
+        <meta
+          name="twitter:image"
+          content="https://github.com/SatVideoDTChallenge/2022/img/website_logo.png"
+        />
+        <meta name="twitter:url" content="satvideodtchallenge.github.io" />
+        <meta
+          name="twitter:description"
+          content="PRCV2024 广域红外小目标检测挑战赛 ---"
+        />
+    
+        <!-- CSS  -->
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="./2024/css/bootstrap.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="./2024/css/main.css?2"
+          media="screen,projection"
+        />
+    
+        <!-- Font Awesome -->
+        <script src="/static/js/jquery.min.js?1"></script>
+        <script
+          src="https://kit.fontawesome.com/ff6e9b10da.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="/static/js/moment.min.js?1"></script>
+        <script src="/static/js/main.js?2"></script>
+        <style> 
+          .divcss5{text-align:center} 
+          </style> 
+    
+        <style type="text/css">
+            #table1{
+                font: bold 16px/1.4em "Trebuchet MS", sans-serif;
+            }
+            #table1 thead th{
+                padding: 15px;
+                border: 1px solid #d8e9b7;
+                border-bottom: 3px solid #d8e9b7;
+                text-shadow: 1px 1px 1px #d8e9b7;
+                color: #fff;
+                background-color: #d8e9b7;
+                border-radius: 5px 5px 0px 0px;
+            }
+            #table1 thead th:empty{
+                background-color: transparent;
+                border: none;
+            }
+            #table1 tbody th{
+                padding: 0px 10px;
+                border: 1px solid #d8e9b7;
+                border-right: 3px solid #d8e9b7;
+                text-shadow: 1px 1px 1px #d8e9b7;
+                color: #666;
+                background-color: #d8e9b7;
+                border-radius: 5px 0px 0px 5px;
+            }
+            #table1 tbody td{
+                padding: 10px;
+                border: 2px solid #E7EFE0;
+                text-align: center;
+                text-shadow: 1px 1px 1px #fff;
+                color: #666;
+                background-color: #DEF3CA;
+                border-radius: 2px;
+            }
+            #table1 tbody span.check::before{
+                content: url(images/check0.png);
+            }
+            #table1 tfoot td{
+                padding: 10px 0px;
+                font-size: 32px;
+                color: #d6e2b5;
+                text-align: center;
+                text-shadow: 1px 1px 1px #444;
+            }
+        </style>
+         
+      </head>
+
+
+      <body>
+        <style>
+            #year-header {
+              border: none;
+              display: block;
+              width: 100%;
+              background: #eaebea;
+            }
+      
+            #year-header ul {
+              display: block;
+              margin: 0;
+              margin-block-start: 0;
+              margin-block-end: 0;
+              padding-inline-start: 0;
+              text-align: center;
+            }
+      
+            #year-header ul li {
+              display: inline-block;
+              list-style: none;
+            }
+      
+            #year-header ul li a {
+              display: block;
+              text-decoration: none;
+              border: none;
+      
+              padding: 0 1.7em;
+              height: 3.2em;
+              line-height: 3.2em;
+              vertical-align: middle;
+      
+              font-family: Helvetica, Arial, sans-serif;
+              font-size: 1em;
+              font-weight: 400;
+              color: #444;
+            }
+      
+            @media (max-width: 1000px) {
+              #year-header ul li a {
+                font-size: 0.8em;
+              }
+            }
+      
+            #year-header ul li a:hover {
+              background: #dddedd;
+              color: #000;
+              transition: 0.5s;
+            }
+        </style>
+
+        <div class="navbar navbar-default sticky-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"></a>
+                    <button
+                    class="navbar-toggle"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbar-main"
+                    >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                    <li><a href="#Description">Description</a></li>
+                    <li><a href="#Datasets">Datasets</a></li>
+                    <li><a href="#Evaluation">Evaluation</a></li>
+                    <li><a href="#Baseline">Baseline</a></li>
+                    <li><a href="#Submission">Submission</a></li>
+                    <li><a href="#dates">Important Dates</a></li>
+                    <li><a href="#Conditions">Conditions</a></li>
+                    <li><a href="#Issues">Issues</a></li>
+                    
+                    <li><a href="#organizers">Organizers</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="page-content">
+              <p><br /></p>
+              <div class="row">
+                <div class="col-xs-12">
+                  <img class="img-fluid" src="2024/img/website_logo.png" />
+                  <!--                <small style="float:right;margin-top:1mm;margin-right:5mm;">Image credit to <a-->
+                  <!--                        href="https://pixabay.com/users/danielhannah-8058574" target="_blank">Daniel Hannah</a></small>-->
+                  <!--<center>Date TBD, half-day</center>-->
+                </div>
+              </div>
+              <p><br /></p>
+      
+             
+              
+              <div class="row">
+                <div class="col-xs-12">
+                  <a class="anchor" id="intro"></a>
+                  <h2>最新发布</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                    <p>
+                    2024-4-12：基本信息发布。             
+                    </p>             
+                </div>
+              </div>
+              <p><br /></p>
+      
+      
+              <div class="row">
+                <div class="col-xs-12">
+                  <a class="anchor" id="intro"></a>
+                  <h2>赛事基本信息</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <p>
+                    <b>第七届中国模式识别与计算机视觉大会(The 7th Chinese Conference on Pattern Recognition and 
+                    Computer Vision PRCV 2024)</b>将于<b>2024年10月18日-20日</b>在乌鲁木齐举办。PRCV2024由中国自动化学会（CAA）、
+                    中国图象图形学学会（CSIG）、中国人工智能学会（CAAI）和中国计算机学会（CCF）联合主办，新疆大学承办，
+                    是国内顶级的模式识别和计算机视觉领域学术盛会，CCF C类会议。
+                  </p>
+             
+                </div>
+              </div>
+              <p><br /></p>
+
+      
+              <div class="row">
+                <div class="col-xs-12">
+                  <a class="anchor" id="Purpose"></a>
+                  <h2>竞赛的目的</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <p>
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <a class="anchor" id="Track1"></a>
+                          <h3>1.通过本次挑战赛促进科研技术的交流研讨和应用推广。</h3>
+                        </div>
+                    </div>            
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <p>
+                            借助高水平会议的宣发优势，吸引更多参研单位积极加入，促进红外小目标检测领域的
+                            科研交流和进步，加速技术创新和应用推广。
+                          </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <a class="anchor" id="Track1"></a>
+                          <h3>2.通过本次挑战赛为探索“大模型”道路摸边探底。</h3>
+                        </div>
+                    </div>     
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <p>
+                            优胜单位的技术报告、技术文档可以作为工业和学术领域内研究人员的重要参考依据，成为
+                            大模型发展领域的“试金石”，特别是在红外弱小目标检测大模型领域相关研究尚属空白的现
+                            阶段，多团队共同研发成果互相碰撞，取得相关应用和设计经验，意义重大。
+                          </p>
+                        </div>
+                    </div>
+              <p><br /></p>
+      
+              
+              <div class="row">
+                <div class="col-xs-12">
+                  <a class="anchor" id="Significance"></a>
+                  <h2>竞赛的意义</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <p>
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <a class="anchor" id="Track1"></a>
+                          <h3>1.红外小目标检测发展迅猛，瓶颈凸显，亟需新的增长引擎。</h3>
+                        </div>
+                    </div>            
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <p>
+                            红外弱小目标检测技术应用广泛，在海洋资源保护、精确制导、无人驾驶、自然资源勘探
+                            等军民领域得到了广泛的应用。近年来，随着深度学习技术的发展，红外弱小目标检测领
+                            域发展迅猛，各科研团体在空基、陆基、天基等公开数据集上不断突破，争相夺得领域新
+                            高度。随着红外检测的迅猛发展，其瓶颈也逐渐凸显。以学术论文为导向的发展方向越来
+                            越难以满足重大应用需求，模型设计日趋复杂、跨域泛化适应能力不足等问题在制约领域
+                            进一步发展的同时，也限制了工程应用价值，领域发展亟需新的增长引擎。
+                          </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <a class="anchor" id="Track1"></a>
+                          <h3>2.红外弱小目标检测AI“大模型”呼之欲出、顺势而为。</h3>
+                        </div>
+                    </div>     
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <p>
+                            近年来，随着以生成式聊天大模型ChatGPT和视觉分割一切模型SAM为代表的大模型技术的爆
+                            火，具备解决空天地一体化的广域红外弱小目标检测领域大模型呼之欲出。领域普遍认为，未
+                            来的红外弱小目标检测大模型具备以下能力：1.多种观测视角下的一体化检测能力（如陆基、
+                            空基、天基）；2.多种目标类型下的一体化检测能力（如点目标、斑目标、扩展目标）；3.多
+                            种红外波段的一体化检测能力（如近红外、短波红外、长波红外）；4.多种图像分辨率的一体
+                            化检测能力（如512×512、10000×10000）；5.多种数据分布的泛化适应能力。
+                          </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <p>
+                            因此，我们组织<b>广域红外小目标检测挑战赛</b>，希望与国内各优势单位形成合力，进一步提升现
+                            有算法的性能极限和泛化适应能力，为后续空天一体化地大模型孵化和领域持续发展注入活力。
+                          </p>
+                        </div>
+                    </div>
+              <p><br /></p>
+
+      </body>
+
+</html>
