@@ -1,1 +1,0 @@
-# wideirstd.github.io
