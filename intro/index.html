@@ -279,7 +279,7 @@
             $$ \begin{matrix} P d = T D / A T \\ F a = F D / N P \end{matrix}$$
           </p>
           <p>
-            其中Pd和Fa分别为检测概率和虚警概率，TD（True Detection）和 FD（False Detection）分别为正确检测的目标数量和虚警数量，AT（Amount of Target）和 NP（Number of Pixels）分别为检测出的目标总数量和图像总像素数。如果目标的质心偏差小于预先定义的偏差阈值Thresh，则认为这些目标是正确预测的目标。如果目标的质心偏差大于预定义的偏差阈值Thresh，我们将这些像素视为错误预测的像素。预定义的偏差阈值Thresh设为3。
+            其中Pd和Fa分别为检测概率和虚警概率，TD（True Detection）和 FD（False Detection）分别为正确检测的目标数量和虚警数量，AT（Amount of Target）和 NP（Number of Pixels）分别为真实目标总数量和图像总像素数。如果目标的质心偏差小于预先定义的偏差阈值Thresh，则认为这些目标是正确预测的目标。如果目标的质心偏差大于预定义的偏差阈值Thresh，我们将这些像素视为错误预测的像素。预定义的偏差阈值Thresh设为3。
           </p>
           <p>
             算法的最终评分采用IoU与Pd的线性加权和，其对应的分数S定义如下：
